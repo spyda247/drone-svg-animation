@@ -1,0 +1,44 @@
+.ngt-container {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 100vh;
+}
+
+svg { 
+     width: 200px;
+     height: 250px;
+     filter: drop-shadow(20px 20px 0.75rem rgb(17, 10, 12));
+}
+
+#drone #wings .propella {
+    transform-origin: center;
+    transform-box: fill-box;
+}
+
+#drone:hover #wings .propella {
+    fill: #999933;
+    transition: fill 2s;
+    animation: propella 0.14s linear infinite;
+}
+
+
+#drone:hover #drone-body path {
+    fill: #999933;
+    transition: fill 2.5s;
+}
+
+@keyframes propella {
+    0% {
+        opacity: 0.95;
+        transform: rotateZ(0deg)
+    }
+    100% {
+        opacity: 0.1;
+        transform: rotateZ(-360deg)
+    }
+}  
